@@ -25,11 +25,14 @@ public class RecipeService {
 				Pair<AmountUnit, Double> pair = entry.getValue();
 				AmountUnit unit = pair.getKey();
 				Double amount = pair.getValue();
-				shoppingList.computeIfPresent(ingredient, (key,value) -> {
-					AmountUnit listUnit = value.getKey();
-					Double listAmount = value.getValue();
-					return null;
-				});
+				//TODO build logic for adding values to shopping list
+//				shoppingList.computeIfPresent(ingredient, (key,value) -> {
+//					AmountUnit listUnit = value.getKey();
+//					if(!listUnit.equals(unit)) {
+//					}
+//					Double listAmount = value.getValue();
+//					return null;
+//				});
 			}
 		}
 		return shoppingList;
